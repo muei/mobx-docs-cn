@@ -223,7 +223,7 @@ export class Todo {
         this.saveHandler = reaction(
             // 观察在 JSON 中使用了的任何东西:
             () => this.asJson,
-            // 如何 autoSave 为 true, 把 json 发送到服务端
+            // 如果 autoSave 为 true, 把 json 发送到服务端
             (json) => {
                 if (this.autoSave) {
                     this.store.transportLayer.saveTodo(json);
